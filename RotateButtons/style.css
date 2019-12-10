@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 14px;
+	font-family: 'Verdana', sans-serif;
+	background: #f6f6f6;
+	height: 100vh;
+	display: flex;
+}
+.container {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.container a {
+	display: inline-block;
+	width: 100%;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+}
+.container a:nth-child(1) {
+	background: #969696;
+}
+.container a:nth-child(2) {
+	background: #ababab;
+}
+.container a:nth-child(3) {
+	background: #d8d8d8;
+}
+.container a span {
+	display: inline-block;
+	transition: .3s;
+}
+.container a:hover span {
+	transform: translateY(100%);
+}
+
+.container a:before {
+	content: attr(data-content);
+	position: absolute;
+	top: -100%;
+	width: 100%;
+	left: 0;
+	background: #527bbb;
+	transition: .3s;
+}
+.container a:nth-child(2):before {
+	background: #77ccf1;
+} 
+.container a:nth-child(3):before {
+	background: #dd4b39;
+} 
+.container a:hover:before {
+	top: 0;
+}
